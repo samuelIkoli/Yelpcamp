@@ -130,7 +130,9 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-app.listen(80, (err) => {
+const port = process.env.PORT || 3000
+
+app.listen(port, (err) => {
     if (err) console.log("Error in server setup")
     console.log('Serving on port 80')
 });
