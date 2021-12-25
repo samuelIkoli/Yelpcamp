@@ -29,7 +29,7 @@ const MongoStore = require('connect-mongo');
 
 // 'mongodb://localhost:27017/yelp-camp'
 
-const Joi = require('joi');
+// const Joi = require('joi');
 
 mongoose.connect(dbUrl);
 
