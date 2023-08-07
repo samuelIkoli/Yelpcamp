@@ -58,7 +58,7 @@ const store = MongoStore.create({
     }
 });
 
-store.on("error", function(e){
+store.on("error", function (e) {
     console.log("store error", e)
 })
 
@@ -134,5 +134,5 @@ const port = process.env.PORT || 3000
 
 app.listen(port, (err) => {
     if (err) console.log("Error in server setup")
-    console.log('Serving on port 80')
+    console.log('Serving on port 3000')
 });
