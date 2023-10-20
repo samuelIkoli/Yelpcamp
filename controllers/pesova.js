@@ -50,8 +50,11 @@ module.exports.createPesova = async (req, res) => {
 }
 module.exports.updatePesova = async (req, res) => {
     try {
-        console.log("id is", req.params.id);
-        console.log("body is", req.body);
+        if (req.body.email) {
+            return res.status(400).json({
+                message: "Can not update email"
+            })
+        }
         const pesova = Pesova.findByIdAndUpdate(req.params.id, {
             ...req.body
         });
